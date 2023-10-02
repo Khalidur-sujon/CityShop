@@ -39,7 +39,7 @@ function Login() {
 
 		if (email && password) {
 			const fetchData = await fetch(
-				`${import.meta.env.VITE_APP_SERVER_DOMAIN}/user/login`,
+				import.meta.env.VITE_APP_SERVER_DOMAIN + "user/login",
 				{
 					method: "POST",
 					headers: {

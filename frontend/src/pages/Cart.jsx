@@ -42,7 +42,7 @@ function Cart() {
 			import.meta.env.VITE_APP_STRIPE_PUBLIC_KEY
 		);
 		const fetchData = await fetch(
-			`${import.meta.env.VITE_APP_SERVER_DOMAIN}/payment/checkout`,
+			import.meta.env.VITE_APP_SERVER_DOMAIN + "payment/checkout",
 			{
 				method: "POST",
 				headers: {
