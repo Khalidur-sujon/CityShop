@@ -222,7 +222,14 @@ function SignUp() {
 					</button>
 					<p className="text-left mt-3">
 						Already have account ?{" "}
-						<Link to={"/login"} className="text-red-800 underline">
+						<Link
+							to={"/login"}
+							onClick={window.scrollTo({
+								top: "0",
+								behavior: "smooth",
+							})}
+							className="text-red-800 underline"
+						>
 							Login
 						</Link>{" "}
 					</p>
