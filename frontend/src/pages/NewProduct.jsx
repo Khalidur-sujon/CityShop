@@ -55,7 +55,7 @@ function NewProduct() {
 
 		if (name && category && image && price && description) {
 			const fetchData = await fetch(
-				`${config.SERVER_DOMAIN}/products/addProduct`,
+				`${import.meta.env.VITE_SERVER_DOMAIN}/products/addProduct`,
 				{
 					method: "POST",
 					headers: {

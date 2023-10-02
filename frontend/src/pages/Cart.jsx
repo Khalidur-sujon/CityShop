@@ -38,9 +38,11 @@ function Cart() {
 
 	//handel payment button
 	const handlePaymentButton = async () => {
-		const stripePromise = await loadStripe(config.STRIPE_PUBLIC_KEY);
+		const stripePromise = await loadStripe(
+			import.meta.env.VITE_STRIPE_PUBLIC_KEY
+		);
 		const fetchData = await fetch(
-			`${config.SERVER_DOMAIN}/payment/checkout`,
+			`${import.meta.env.VITE_SERVER_DOMAIN}/payment/checkout`,
 			{
 				method: "POST",
 				headers: {
