@@ -27,7 +27,7 @@ function App() {
 			const fetchData = await fetch(
 				` ${
 					import.meta.env.VITE_APP_SERVER_DOMAIN
-				}/products/getAllProducts `
+				}products/getAllProducts `
 			);
 			const responseData = await fetchData.json();
 			dispatch(setAllProductsIntoReduxState(responseData));
