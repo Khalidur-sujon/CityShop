@@ -23,7 +23,6 @@ function Header() {
 	const dispatch = useDispatch();
 	const userState = useSelector((state) => state.user.userInfo);
 
-	console.log("-------->", userState.email);
 	const cartItems = useSelector((state) => state.products.cartItem);
 
 	//cartItemNumber
