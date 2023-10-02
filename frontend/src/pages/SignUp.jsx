@@ -47,7 +47,7 @@ function SignUp() {
 			//check if password and confirm password are same
 			if (password === confirmPassword) {
 				const fetchData = await fetch(
-					`${import.meta.env.VITE_SERVER_DOMAIN}/user/signUp`,
+					`${import.meta.env.VITE_APP_SERVER_DOMAIN}/user/signUp`,
 					{
 						method: "POST",
 						headers: {
