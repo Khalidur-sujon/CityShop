@@ -76,7 +76,7 @@ function Header() {
 								>
 									Home
 								</ScrollLink.Link>
-								<Link to={"menu"}> Menu</Link>
+								<Link to={"/menu"}> Menu</Link>
 								<ScrollLink.Link
 									to="about"
 									spy={true}
@@ -102,10 +102,10 @@ function Header() {
 					) : (
 						<>
 							<nav className=" gap-4 md:gap-6 text-base hidden md:flex md:text-lg">
-								<Link to={""}>Home</Link>
-								<Link to={"menu"}> Menu</Link>
-								<Link to={"about"}>About</Link>
-								<Link to={"contact"}>Contact</Link>
+								<Link to={"/"}>Home</Link>
+								<Link to={"/menu"}> Menu</Link>
+								<Link to={"/about"}>About</Link>
+								<Link to={"/contact"}>Contact</Link>
 							</nav>
 						</>
 					)}
@@ -155,7 +155,7 @@ function Header() {
 										</p>
 									) : (
 										<Link
-											to={"login"}
+											to={"/login"}
 											className="whitespace-nowrap cursor-pointer hover:text-orange-500"
 										>
 											Login
