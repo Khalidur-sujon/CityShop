@@ -21,14 +21,10 @@ function App() {
 			dispatch(setUserInfo(dataFromLocalStorage));
 		}
 	}, [dataFromLocalStorage, dispatch]);
-
+	const url = import.meta.env.VITE_APP_SERVER_DOMAIN;
 	useEffect(() => {
 		(async () => {
-			const fetchData = await fetch(
-				` ${
-					import.meta.env.VITE_APP_SERVER_DOMAIN
-				}products/getAllProducts `
-			);
+			const fetchData = await fetch(url + "/products/getAllProducts");
 			const responseData = await fetchData.json();
 			dispatch(setAllProductsIntoReduxState(responseData));
 		})();

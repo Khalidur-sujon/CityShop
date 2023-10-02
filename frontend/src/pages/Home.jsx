@@ -21,6 +21,8 @@ function Home() {
 					The Fastest Delivery{" "}
 					<span className="text-red-600">in your Home</span>
 				</h1>
+
+				<h1>{import.meta.env.VITE_APP_SERVER_DOMAIN}</h1>
 				<p className="w-full text-sm sm:max-w-lg text-slate-600 tracking-wider mx-auto">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 					Animi rem eius earum facilis! Sit, atque distinctio sint
