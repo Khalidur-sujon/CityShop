@@ -25,7 +25,7 @@ function App() {
 	useEffect(() => {
 		(async () => {
 			const fetchData = await fetch(
-				`${config.SERVER_DOMAIN} /products/getAllProducts`
+				`${config.SERVER_DOMAIN}/products/getAllProducts`
 			);
 			const responseData = await fetchData.json();
 			dispatch(setAllProductsIntoReduxState(responseData));
