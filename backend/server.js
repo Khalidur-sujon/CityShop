@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 
 //port
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 //route
 app.get("/", (req, res) => {
