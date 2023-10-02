@@ -39,7 +39,7 @@ function Login() {
 
 		if (email && password) {
 			const fetchData = await fetch(
-				import.meta.env.VITE_APP_SERVER_DOMAIN + "user/login",
+				import.meta.env.VITE_APP_SERVER_DOMAIN + "/user/login",
 				{
 					method: "POST",
 					headers: {
@@ -80,6 +80,7 @@ function Login() {
 						alt="signUp_image"
 					/>
 				</div>
+
 				<form className="w-full">
 					{/* email */}
 					<label htmlFor="email" className="text-sm font-normal">
